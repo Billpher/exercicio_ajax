@@ -19,5 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         seguidores.innerText = json.followers;
         seguindo.innerText = json.following;
         perfil.href = json.html_url;
-    })
+    }).catch(function(error) {
+        alert("Erro ao tentar encontrar perfil")
+    });
 })
